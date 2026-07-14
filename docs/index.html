@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Philippines | A Land of Natural Beauty</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {
             --primary: #2c3e50;
@@ -48,7 +49,7 @@
         }
 
         main {
-            max-width: 800px;
+            max-width: 900px;
             padding: 20px;
             text-align: center;
         }
@@ -59,22 +60,30 @@
             margin-bottom: 30px;
         }
 
-        .features {
-            display: flex;
-            justify-content: center;
+        .stats-container {
+            display: grid;
+            grid_template_columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
-            flex-wrap: wrap;
+            width: 100%;
             margin-top: 50px;
         }
 
-        .feature-item {
-            border-left: 1px solid var(--accent);
-            padding-left: 15px;
+        .chart-box {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+
+        h3 {
+            color: var(--primary);
+            margin-top: 0;
+            font-size: 1.2rem;
         }
 
         footer {
-            position: absolute;
-            bottom: 40px;
+            padding: 40px 0;
             font-size: 0.8rem;
             color: #ccc;
         }
@@ -99,14 +108,16 @@
             the beauty remains timeless.
         </p>
 
-        <div class="features">
-            <div class="feature-item">
-                <strong>Emerald Islands</strong>
-                <p style="font-size: 0.9rem; margin-top:5px;">Crystal clear waters & pristine shores.</p>
+        <div class="stats-container">
+            <div class="chart-box">
+                <h3>Island Diversity</h3>
+                <canvas id="islandChart"></canvas>
+                <p style="font-size: 0.8rem; margin-top:15px;">The Philippines consists of approximately 7,641 islands.</p>
             </div>
-            <div class="feature-item">
-                <strong>Cultural Heart</strong>
-                <p style="font-size: 0.9rem; margin-top:5px;">Rich history and vibrant traditions.</p>
+            <div class="chart-box">
+                <h3>Cultural Language Variety</h3>
+                <canvas id="languageChart"></canvas>
+                <p style="font-size: 0.8rem; margin-top:15px;">Home to over 170 languages and dialects.</p>
             </div>
         </div>
     </main>
@@ -114,5 +125,49 @@
     <footer>
         Crafted for the beauty of the islands.
     </footer>
+
+    <script>
+        const ctx1 = document.getElementById('islandChart').getContext('2d');
+        new Chart(ctx1, {
+            type: 'doughnut',
+            data: {
+                labels: ['Luzon Group', 'Visayas Group', 'Mindanao Group'],
+                datasets: [{
+                    label: 'Island Clusters',
+                    data: [3000, 2600, 2041],
+                    backgroundColor: ['#2c3e50', '#d4af37', '#bdc3c7'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+
+        const ctx2 = document.getElementById('languageChart').getContext('2d');
+        new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['Major Languages', 'Regional Dialects'],
+                datasets: [{
+                    label: 'Count',
+                    data: [10, 160],
+                    backgroundColor: '#d4af37'
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: { beginAtZero: true }
+                },
+                plugins: {
+                    legend: { display: false }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
