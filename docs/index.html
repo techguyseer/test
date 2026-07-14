@@ -3,23 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
+    <title>The Philippines | A Land of Natural Beauty</title>
     <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #d4af37; /* Gold accent */
+            --bg: #fcfcfc;
+            --text: #333;
+        }
+
         body {
-            font-family: sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-weight: 300;
+            font-size: 3rem;
+            letter-spacing: 4px;
+            margin: 0;
+            color: var(--primary);
+            text-transform: uppercase;
+        }
+
+        .separator {
+            width: 50px;
+            height: 2px;
+            background: var(--accent);
+            margin: 15px auto;
+        }
+
+        main {
+            max-width: 800px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .features {
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 50px;
         }
-        h1 {
-            color: #333;
+
+        .feature-item {
+            border-left: 1px solid var(--accent);
+            padding-left: 15px;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 40px;
+            font-size: 0.8rem;
+            color: #ccc;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
-    <h1>Hello, world!</h1>
+    <header>
+        <h1>Philippines</h1>
+        <div class="separator"></div>
+        <p style="font-style: italic;">Where nature meets a thousand islands.</p>
+    </header>
+
+    <main>
+        <p>
+            Experience the vibrant colors of our turquoise waters, 
+            the emerald green of tropical highlands, and the warmth 
+            of world-renowned smiles. From white sands to hidden lagoons, 
+            the beauty remains timeless.
+        </p>
+
+        <div class="features">
+            <div class="feature-item">
+                <strong>Emerald Islands</strong>
+                <p style="font-size: 0.9rem; margin-top:5px;">Crystal clear waters & pristine shores.</p>
+            </div>
+            <div class="feature-item">
+                <strong>Cultural Heart</strong>
+                <p style="font-size: 0.9rem; margin-top:5px;">Rich history and vibrant traditions.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        Crafted for the beauty of the islands.
+    </footer>
 </body>
 </html>
