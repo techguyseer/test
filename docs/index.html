@@ -3,171 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Philippines | A Land of Natural Beauty</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        :root {
-            --primary: #2c3e50;
-            --accent: #d4af37; /* Gold accent */
-            --bg: #fcfcfc;
-            --text: #333;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg);
-            color: var(--text);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            line-height: 1.8;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        h1 {
-            font-weight: 300;
-            font-size: 3rem;
-            letter-spacing: 4px;
-            margin: 0;
-            color: var(--primary);
-            text-transform: uppercase;
-        }
-
-        .separator {
-            width: 50px;
-            height: 2px;
-            background: var(--accent);
-            margin: 15px auto;
-        }
-
-        main {
-            max-width: 900px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        p {
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 30px;
-        }
-
-        .stats-container {
-            display: grid;
-            grid_template_columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            width: 100%;
-            margin-top: 50px;
-        }
-
-        .chart-box {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            border: 1px solid #eee;
-        }
-
-        h3 {
-            color: var(--primary);
-            margin-top: 0;
-            font-size: 1.2rem;
-        }
-
-        footer {
-            padding: 40px 0;
-            font-size: 0.8rem;
-            color: #ccc;
-        }
-
-        @media (max-width: 600px) {
-            h1 { font-size: 2rem; }
-        }
-    </style>
+    <title>Mira Soap | Ethereal Minimalism</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Philippines</h1>
-        <div class="separator"></div>
-        <p style="font-style: italic;">Where nature meets a thousand islands.</p>
-    </header>
+    <nav>
+        <a href="#hero">Home</a>
+        <a href="#gallery">Collection</a>
+        <a href="#story">Our Story</a>
+        <a href="#footer">Contact</a>
+    </nav>
 
-    <main>
-        <p>
-            Experience the vibrant colors of our turquoise waters, 
-            the emerald green of tropical highlands, and the warmth 
-            of world-renowned smiles. From white sands to hidden lagoons, 
-            the beauty remains timeless.
-        </p>
-
-        <div class="stats-container">
-            <div class="chart-box">
-                <h3>Island Diversity</h3>
-                <canvas id="islandChart"></canvas>
-                <p style="font-size: 0.8rem; margin-top:15px;">The Philippines consists of approximately 7,641 islands.</p>
-            </div>
-            <div class="chart-box">
-                <h3>Cultural Language Variety</h3>
-                <canvas id="languageChart"></canvas>
-                <p style="font-size: 0.8rem; margin-top:15px;">Home to over 170 languages and dialects.</p>
+    <header id="hero" class="hero">
+        <div class="hero-overlay">
+            <img src="https://loremflickr.com/1200/600/soap" alt="Mira Soap Hero" class="hero-img">
+            <div class="hero-content">
+                <h1 class="serif">Mira Soap</h1>
+                <p>Timeless purity, captured in a bar.</p>
             </div>
         </div>
-    </main>
+    </header>
 
-    <footer>
-        Crafted for the beauty of the islands.
+    <section id="gallery" class="section gallery">
+        <h2 class="section-title">The Collection</h2>
+        <div class="grid">
+            <div class="product-item reveal">
+                <img src="https://loremflickr.com/400/300/botanical?lock=1" alt="Soap 1">
+                <p>Botanical Bloom</p>
+            </div>
+            <div class="product-item reveal">
+                <img src="https://loremflickr.com/400/300/botanical?lock=2" alt="Soap 2">
+                <p>Ocean Mist</p>
+            </div>
+            <div class="product-item reveal">
+                <img src="https://loremflickr.com/400/300/botanical?lock=3" alt="Soap 3">
+                <p>Sandalwood Hush</p>
+            </div>
+            <div class="product-item reveal">
+                <img src="https://loremflickr.com/400/300/botanical?lock=4" alt="Soap 4">
+                <p>Lavender Drift</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="story" class="section story reveal">
+        <div class="story-container">
+            <div class="story-text">
+                <h2 class="serif">A Legacy of Calm</h2>
+                <p>Mira Soap was born from a desire to return to the essentials. In a world of noise, we find beauty in the quiet. Our soaps are crafted using traditional methods, allowing the natural ingredients to speak for themselves.</p>
+                <p>Every bar is a study in balance—between scent and skin, between nature and art. We believe that a simple ritual, when performed with intention, becomes a moment of transcendence.</p>
+            </div>
+            <div class="story-image">
+                <img src="https://loremflickr.com/600/400/nature" alt="Nature Story">
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Mira Soap. Crafted for tranquility.</p>
+            <div class="socials">
+                <a href="#">Instagram</a>
+                <a href="#">Pinterest</a>
+                <a href="#">Email</a>
+            </div>
+        </div>
     </footer>
 
-    <script>
-        const ctx1 = document.getElementById('islandChart').getContext('2d');
-        new Chart(ctx1, {
-            type: 'doughnut',
-            data: {
-                labels: ['Luzon Group', 'Visayas Group', 'Mindanao Group'],
-                datasets: [{
-                    label: 'Island Clusters',
-                    data: [3000, 2600, 2041],
-                    backgroundColor: ['#2c3e50', '#d4af37', '#bdc3c7'],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: { position: 'bottom' }
-                }
-            }
-        });
-
-        const ctx2 = document.getElementById('languageChart').getContext('2d');
-        new Chart(ctx2, {
-            type: 'bar',
-            data: {
-                labels: ['Major Languages', 'Regional Dialects'],
-                datasets: [{
-                    label: 'Count',
-                    data: [10, 160],
-                    backgroundColor: '#d4af37'
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    y: { beginAtZero: true }
-                },
-                plugins: {
-                    legend: { display: false }
-                }
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
