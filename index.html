@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumi Soap | The Art of Ritual</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-sand: #f2eee3;
+            --color-stone: #a8a29e;
+            --color-olive: #556b2f;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-sand);
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, .serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-overlay {
+            background: rgba(0, 0, 0, 0.2);
+        }
+        .ritual-text {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Hero Section -->
+    <section class="relative h-screen w-full overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1605002555856-f1a7451ef293?q=80&w=2070&auto=format&fit=crop" 
+             alt="Zen Soap Minimalist" 
+             class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 hero-overlay flex items-center justify-center text-center text-white px-4">
+            <div class="space-y-4">
+                <h1 class="text-6xl md:text-8xl font-light tracking-wide">Rumi Soap</h1>
+                <p class="text-lg md:text-xl italic font-light tracking-widest uppercase">The Art of Ritual</p>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- The Ritual Section -->
+    <section class="py-24 px-6 md:px-12 lg:px-24 space-y-32">
+        <div class="text-center mb-20 fade-in">
+            <h2 class="text-4xl md:text-5xl mb-6">The Ritual</h2>
+            <div class="w-12 h-px bg-stone-400 mx-auto"></div>
+        </div>
+
+        <!-- Ritual Item 1 -->
+        <div class="flex flex-col md:flex-row items-center gap-12 md:gap-24 fade-in">
+            <div class="w-full md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1547793549-794983957992?q=80&w=2070&auto=format&fit=crop" 
+                     alt="Ritual Water" 
+                     class="w-full h-auto object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-700 shadow-sm">
+            </div>
+            <div class="w-full md:w-1/2 ritual-text text-center md:text-left">
+                <h3 class="text-3xl mb-4 italic">A Moment of Stillness</h3>
+                <p class="text-stone-600 leading-relaxed font-light text-lg">
+                    Bathing is not merely a necessity, but a sacred transition. A way to shed the noise of the day and return to the essence of self.
+                </p>
+            </div>
+        </div>
+
+        <!-- Ritual Item 2 -->
+        <div class="flex flex-col md:flex-row-reverse items-center gap-12 md:gap-24 fade-in">
+            <div class="w-full md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1559056199-6e677bdd639b?q=80&w=2070&auto=format&fit=crop" 
+                     alt="Soap Texture" 
+                     class="w-full h-auto object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-700 shadow-sm">
+            </div>
+            <div class="w-full md:w-1/2 ritual-text text-center md:text-right">
+                <h3 class="text-3xl mb-4 italic">Nature's Whisper</h3>
+                <p class="text-stone-600 leading-relaxed font-light text-lg">
+                    Crafted from the earth, for the earth. Each bar is an invitation to breathe in the scent of rain-soaked olive groves and sun-warmed stone.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Collection Section -->
+    <section class="py-24 bg-[#ecebe4] px-6 md:px-12 lg:px-24">
+        <div class="text-center mb-16 fade-in">
+            <h2 class="text-4xl md:text-5xl mb-4">The Collection</h2>
+            <p class="text-stone-500 font-light italic">Curated Simplicity</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <!-- Product 1 -->
+            <div class="group cursor-pointer fade-in">
+                <div class="overflow-hidden mb-4">
+                    <img src="https://images.unsplash.com/photo-1600857183247-3a362b33227c?q=80&w=1974&auto=format&fit=crop" 
+                         alt="Sandstone Soap" 
+                         class="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <h3 class="text-xl mb-2">Sandstone & Sea Salt</h3>
+                <p class="text-stone-500 font-light text-sm mb-4">Purifying. Earthy. Raw.</p>
+                <span class="text-olive-700 font-medium tracking-widest text-xs uppercase border-b border-olive-700 pb-1">View Detail</span>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="group cursor-pointer fade-in" style="transition-delay: 200ms;">
+                <div class="overflow-hidden mb-4">
+                    <img src="https://images.unsplash.com/photo-1607006463106-a50c77a66d17?q=80&w=1974&auto=format&fit=crop" 
+                         alt="Olive Soap" 
+                         class="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <h3 class="text-xl mb-2">Pressed Olive & Mint</h3>
+                <p class="text-stone-500 font-light text-sm mb-4">Refreshing. Botanical. Calm.</p>
+                <span class="text-olive-700 font-medium tracking-widest text-xs uppercase border-b border-olive-700 pb-1">View Detail</span>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="group cursor-pointer fade-in" style="transition-delay: 400ms;">
+                <div class="overflow-hidden mb-4">
+                    <img src="https://images.unsplash.com/photo-1546563333-0760a7134a02?q=80&w=2070&auto=format&fit=crop" 
+                         alt="Stone Soap" 
+                         class="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <h3 class="text-xl mb-2">Sandalwood & Stone</h3>
+                <p class="text-stone-500 font-light text-sm mb-4">Deep. Woody. Timeless.</p>
+                <span class="text-olive-700 font-medium tracking-widest text-xs uppercase border-b border-olive-700 pb-1">View Detail</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 bg-stone-100 text-stone-600 px-6 text-center">
+        <div class="max-w-screen-md mx-auto space-y-8">
+            <h2 class="serif text-3xl text-stone-800">Rumi Soap</h2>
+            <div class="flex justify-center gap-8 text-sm font-light tracking-wide">
+                <a href="#" class="hover:text-olive-800 transition-colors">Instagram</a>
+                <a href="#" class="hover:text-olive-800 transition-colors">Pinterest</a>
+                <a href="#" class="hover:text-olive-800 transition-colors">Our Story</a>
+            </div>
+            <p class="text-xs font-light">© 2026 Rumi Soap. Designed for the mindful.</p>
+            <div class="pt-8">
+                <a href="#" class="bg-[#556b2f] text-white px-10 py-3 text-sm uppercase tracking-widest hover:bg-olive-900 transition-all rounded-full">
+                    Shop Now
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for fade-in effect
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
